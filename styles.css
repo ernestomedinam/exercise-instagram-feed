@@ -1,0 +1,60 @@
+body {
+    /* important in order to avoid unwanted spaces around our webpage content! */
+    margin: 0;
+    padding: 0;
+}
+/* body's direct child, parent for webpage-header and main-container */
+.webpage-container {
+    background-color: lightgray;
+    display: flex;
+    flex-flow: column;
+}
+.webpage-header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: white;
+}
+/* parent for all articles! */
+.main-container {
+    /* this padding is to create a gap from main-container's top edge */
+    padding: 3rem 0;
+    /* this gap is to create a space between each of main-container children */
+    gap: 3rem;
+    display: flex;
+    flex-flow: column;
+    /* this forces children to align to the center */
+    align-items: center;
+}
+.post {
+    display: flex;
+    flex-flow: column;
+    width: 40%;
+    /* this works so pictures don't shrink infinitely with screen width reduction */
+    min-width: 384px;
+}
+.post-header {
+    background-color: white;
+    display: flex;
+    /* this is a row so children (h2 and p for post date) will render
+    in a row (one next to the other) and not a column (one on top of the other) */
+    flex-flow: row;
+    /* this puts as much space between children as possible */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.post-content {
+    width: 100%;
+}
+.post-content > img {
+    /* image size and scale will mostly depend on used image aspect ratio,
+    in order for image to completely fill parent div, we will use these */
+    width: 100%;
+    height: 100%
+}
+.post-footer {
+    display: flex;
+    padding: 0 1rem;
+    background-color: white;
+}

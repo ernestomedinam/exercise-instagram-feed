@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My instagram feed</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- will contain the whole webpage; not necessary for this exercise,
+    but it will make sense when working with JSX and React's one parent rule -->
+    <div class="webpage-container">
+        <!-- contains header for the webpage; here we could also have a navbar instead -->
+        <header class="webpage-header">
+            <h1>Breathe Code Photo Feed</h1>
+        </header>
+        <!-- contains webpage main content -->
+        <main class="main-container">
+            <!-- each post with photo is an article -->
+            <article class="post">
+                <!-- each post has a header with a title and date month/year -->
+                <header class="post-header">
+                    <h2>My first photo</h2>
+                    <p>05/20</p>
+                </header>
+                <!-- each post has a picture that we will hold inside this div -->
+                <div class="post-content">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg" alt="cute dog number 1" />
+                </div>
+                <!-- each post has a footer with some text on it -->
+                <footer class="post-footer">
+                    <p>This is my first photo of the feed. This is a multiline comment for testing purposes as I am learning to code with #BreatheCode</p>
+                </footer>
+            </article>
+            <!-- same structure applies for all posts! -->
+            <article class="post">
+                <header class="post-header">
+                    <h2>My second photo</h2>
+                    <p>04/20</p>
+                </header>
+                <div class="post-content">
+                    <img src="https://www.petlandflorida.com/wp-content/uploads/2019/09/Petland_Florida_Cavalier_King_Charles_Spaniel_puppy.jpg" alt="cute dog number 2" />
+                </div>
+                <footer class="post-footer">
+                    <p>This is my second photo of the feed. This is a multiline comment for testing purposes as I am learning to code with #BreatheCode</p>
+                </footer>
+            </article>
+            <article class="post">
+                <header class="post-header">
+                    <h2>My third photo</h2>
+                    <p>03/20</p>
+                </header>
+                <div class="post-content">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lifestyle-bestdogbreeds-1577128927.png" alt="cute dog number 3" />
+                </div>
+                <footer class="post-footer">
+                    <p>This is my third photo of the feed. This is a multiline comment for testing purposes as I am learning to code with #BreatheCode</p>
+                </footer>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
