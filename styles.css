@@ -1,48 +1,68 @@
-body {
-    /* important in order to avoid unwanted spaces around our webpage content! */
+/* remove padding margin and set box-sizing */
+/* important in order to avoid unwanted spaces around our webpage content! */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* webkit chrome compatibility attributes */
 }
 /* body's direct child, parent for webpage-header and main-container */
 .webpage-container {
     background-color: lightgray;
     display: flex;
-    flex-flow: column;
+    display: -webkit-flex;
+    display: -ms-flexbox; /* ms edge compatibility attributes */
+    flex-flow: column nowrap;
 }
 .webpage-header {
+    padding: 1rem 0;
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     flex-flow: column;
     align-items: center;
     background-color: white;
 }
 /* parent for all articles! */
 .main-container {
+    /* this gap is to create a space between each of main-container children */
+    /* gap: 3rem; will only work for firefox, replaced by margin-bottom on post and padding 3rem here */
     /* this padding is to create a gap from main-container's top edge */
     padding: 3rem 0;
-    /* this gap is to create a space between each of main-container children */
-    gap: 3rem;
     display: flex;
-    flex-flow: column;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: column nowrap;
     /* this forces children to align to the center */
     align-items: center;
 }
 .post {
     display: flex;
-    flex-flow: column;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: column nowrap;
     width: 40%;
     /* this works so pictures don't shrink infinitely with screen width reduction */
     min-width: 384px;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 .post-header {
     background-color: white;
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     /* this is a row so children (h2 and p for post date) will render
     in a row (one next to the other) and not a column (one on top of the other) */
-    flex-flow: row;
+    flex-flow: row nowrap;
     /* this puts as much space between children as possible */
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
+}
+.post-header > p {
+    color: gray;
 }
 .post-content {
     width: 100%;
@@ -55,6 +75,24 @@ body {
 }
 .post-footer {
     display: flex;
-    padding: 0 1rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    padding: 1rem 1rem;
     background-color: white;
+}
+/* class for divs that will hold img in background */
+.img-box {
+    width: 100%;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* id dog2 img */
+#dog2 {
+    background-image: url("https://www.petlandflorida.com/wp-content/uploads/2019/09/Petland_Florida_Cavalier_King_Charles_Spaniel_puppy.jpg"); 
+}
+/* id dog3 img */
+#dog3 {
+    background-image: url("./assets/dog_3.png");
 }
